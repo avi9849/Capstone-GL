@@ -1,3 +1,5 @@
+create database eshoppp;
+use eshoppp;
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
 -- Host: localhost    Database: eshopp
@@ -593,6 +595,65 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2022-08-03 17:44:02
+-- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
+--
+-- Host: localhost    Database: eshopp
+-- ------------------------------------------------------
+-- Server version	8.0.28
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `order_main`
+--
+
+DROP TABLE IF EXISTS `order_main`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `order_main` (
+  `order_id` bigint NOT NULL,
+  `buyer_address` varchar(255) DEFAULT NULL,
+  `buyer_email` varchar(255) DEFAULT NULL,
+  `buyer_name` varchar(255) DEFAULT NULL,
+  `buyer_phone` varchar(255) DEFAULT NULL,
+  `create_time` datetime(6) DEFAULT NULL,
+  `order_amount` decimal(19,2) NOT NULL,
+  `order_status` int NOT NULL DEFAULT '0',
+  `update_time` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_main`
+--
+LOCK TABLES `order_main` WRITE;
+/*!40000 ALTER TABLE `order_main` DISABLE KEYS */;
+INSERT INTO `order_main` VALUES (10,'14-D Sarvanand  nagar,bholaram ustad marg indore, Utsav girls  hostel','pinal@eshop.com','pinal','6260126222','2022-07-10 16:48:49.111596',82.00,2,'2022-07-13 11:47:27.917562'),(21,'qwqreef','reddyeswar5050@gmail.com','Romax Designer Software','9849493993','2022-07-31 10:34:03.202053',350.00,2,'2022-08-03 11:43:53.040984'),(42,'karugorumilli','ravisaladi73@gmail.com','Saladi Shanmukha Sri Rama Chandra Mur','9849493993','2022-07-31 15:04:34.316274',2599.00,0,'2022-07-31 15:04:34.316274'),(47,'karugorumilli','reddyeswa@gmail.com','Saladi  Venkata Satya Ravi Kishore','9849493993','2022-08-01 10:04:46.163567',1699.00,0,'2022-08-01 10:04:46.163567'),(49,'karugorumilli','reddyeswa@gmail.com','Saladi  Venkata Satya Ravi Kishore','9849493993','2022-08-01 13:08:42.120967',77970.00,0,'2022-08-01 13:08:42.153988'),(87,'qwqreef','reddyeswar5050@gmail.com','Romax Designer Software','9849493993','2022-08-03 11:37:30.187314',184000.00,2,'2022-08-03 11:43:52.012326'),(89,'qwqreef','reddyeswar5050@gmail.com','Romax Designer Software','9849493993','2022-08-03 11:41:12.737933',5559.00,2,'2022-08-03 11:43:49.788850'),(91,'qwqreef','reddyeswar5050@gmail.com','Romax Designer Software','9849493993','2022-08-03 11:43:29.817711',2599.00,2,'2022-08-03 11:43:46.884117');
+/*!40000 ALTER TABLE `order_main` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-08-04 23:04:50
+
+
 
 
 
